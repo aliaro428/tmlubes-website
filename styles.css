@@ -58,7 +58,7 @@ nav a:hover, nav a.active {
 
 /* Hero Section */
 .hero {
-    background: url('https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+    background: url('images/cover.jpeg') no-repeat center/cover;
     height: 60vh;
     display: flex;
     align-items: center;
