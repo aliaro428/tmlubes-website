@@ -7,19 +7,20 @@
 
 body {
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #fff; /* White text */
+    background-color: #1a1a1a; /* Black background */
 }
 
 /* Header */
 header {
-    background: linear-gradient(to right, #1a1a1a, #333);
-    color: white;
+    background: linear-gradient(to right, #1a1a1a, #2b2b2b);
+    color: #fff;
     padding: 1rem 0;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 100;
+    animation: fadeIn 1s ease-in;
 }
 
 header h1 {
@@ -34,7 +35,7 @@ header p {
 
 /* Navigation */
 nav {
-    background: #333;
+    background: #2b2b2b;
     padding: 1rem 0;
 }
 
@@ -46,14 +47,14 @@ nav ul {
 }
 
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s;
 }
 
 nav a:hover, nav a.active {
-    color: #ff6200;
+    color: #D4A017; /* Golden on hover for contrast */
 }
 
 /* Hero Section */
@@ -64,8 +65,9 @@ nav a:hover, nav a.active {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: #fff;
     position: relative;
+    animation: fadeIn 1.5s ease-in;
 }
 
 .hero::before {
@@ -75,7 +77,7 @@ nav a:hover, nav a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay for contrast */
 }
 
 .hero-content {
@@ -100,47 +102,65 @@ nav a:hover, nav a.active {
 }
 
 .cta-button {
-    background: #ff6200;
-    color: white;
+    background: #D4A017;
+    color: #1a1a1a;
     padding: 0.8rem 2rem;
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.1rem;
-    transition: background 0.3s;
+    transition: transform 0.3s ease, background 0.3s;
     display: inline-block;
 }
 
 .cta-button:hover {
-    background: #e05500;
+    background: #b88c14;
+    transform: scale(1.05); /* Scale animation on hover */
 }
 
 .cta-button.secondary {
     background: transparent;
-    border: 2px solid #ff6200;
+    border: 2px solid #D4A017;
+    color: #fff;
 }
 
 .cta-button.secondary:hover {
-    background: #ff6200;
+    background: #D4A017;
+    color: #1a1a1a;
+    transform: scale(1.05);
+}
+
+/* Brand Partners Slider Section */
+.brand-partners {
+    background: #2b2b2b;
+}
+
+.brand-partners h2 {
+    color: #000;
+}
+
+.brand-partners .flex-none {
+    animation: slideIn 1s ease-in-out;
 }
 
 /* About Section */
 .about {
     padding: 4rem 2rem;
     text-align: center;
-    background: white;
+    background: #1a1a1a;
+    animation: fadeIn 1s ease-in;
 }
 
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: #1a1a1a;
+    color: #fff;
 }
 
 .about p, .about ul {
     max-width: 800px;
     margin: 0 auto;
     font-size: 1.1rem;
-    color: #555;
+    color: #fff;
 }
 
 .about ul {
@@ -161,7 +181,7 @@ nav a:hover, nav a.active {
     flex: 1;
     min-width: 200px;
     padding: 1rem;
-    background: #f4f4f4;
+    background: #2b2b2b;
     border-radius: 10px;
     text-align: center;
 }
@@ -169,30 +189,31 @@ nav a:hover, nav a.active {
 .highlight h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: #1a1a1a;
+    color: #fff;
 }
 
 .highlight p {
     font-size: 1rem;
-    color: #555;
+    color: #fff;
 }
 
 /* Products/Services Section */
 .products {
     padding: 4rem 2rem;
-    background: #f4f4f4;
+    background: #1a1a1a;
     text-align: center;
+    animation: fadeIn 1s ease-in;
 }
 
 .products h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #1a1a1a;
+    color: #fff;
 }
 
 .products > p {
     font-size: 1.1rem;
-    color: #555;
+    color: #fff;
     margin-bottom: 2rem;
 }
 
@@ -205,10 +226,10 @@ nav a:hover, nav a.active {
 }
 
 .product-card {
-    background: white;
+    background: #2b2b2b;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s;
 }
 
@@ -225,41 +246,43 @@ nav a:hover, nav a.active {
 .product-card h3 {
     font-size: 1.5rem;
     margin: 1rem 0 0.5rem;
-    color: #1a1a1a;
+    color: #fff;
 }
 
 .product-card p {
     padding: 0 1rem 1rem;
     font-size: 1rem;
-    color: #555;
+    color: #fff;
 }
 
 .product-button {
     display: block;
-    background: #ff6200;
-    color: white;
+    background: #D4A017;
+    color: #1a1a1a;
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 5px;
     margin: 0 1rem 1rem;
-    transition: background 0.3s;
+    transition: transform 0.3s ease, background 0.3s;
 }
 
 .product-button:hover {
-    background: #e05500;
+    background: #b88c14;
+    transform: scale(1.05);
 }
 
 /* Why Choose Us Section */
 .why-choose-us {
     padding: 4rem 2rem;
-    background: white;
+    background: #1a1a1a;
     text-align: center;
+    animation: fadeIn 1s ease-in;
 }
 
 .why-choose-us h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #1a1a1a;
+    color: #fff;
 }
 
 .features-grid {
@@ -285,25 +308,26 @@ nav a:hover, nav a.active {
 .feature h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: #1a1a1a;
+    color: #fff;
 }
 
 .feature p {
     font-size: 1rem;
-    color: #555;
+    color: #fff;
 }
 
 /* Testimonials Section */
 .testimonials {
     padding: 4rem 2rem;
-    background: #f4f4f4;
+    background: #1a1a1a;
     text-align: center;
+    animation: fadeIn 1s ease-in;
 }
 
 .testimonials h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #1a1a1a;
+    color: #fff;
 }
 
 .testimonial-grid {
@@ -315,34 +339,35 @@ nav a:hover, nav a.active {
 }
 
 .testimonial {
-    background: white;
+    background: #2b2b2b;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .testimonial p {
     font-size: 1.1rem;
-    color: #555;
+    color: #fff;
     margin-bottom: 1rem;
 }
 
 .testimonial h4 {
     font-size: 1rem;
-    color: #ff6200;
+    color: #D4A017; /* Keeping golden for contrast in testimonials */
 }
 
 /* Maintenance Tips Section */
 .maintenance-tips {
     padding: 4rem 2rem;
-    background: white;
+    background: #1a1a1a;
     text-align: center;
+    animation: fadeIn 1s ease-in;
 }
 
 .maintenance-tips h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #1a1a1a;
+    color: #fff;
 }
 
 .tips-grid {
@@ -354,10 +379,10 @@ nav a:hover, nav a.active {
 }
 
 .tip-card {
-    background: #f4f4f4;
+    background: #2b2b2b;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .tip-card img {
@@ -370,41 +395,43 @@ nav a:hover, nav a.active {
     font-size: 1.5rem;
     margin: 1rem 0 0.5rem;
     padding: 0 1rem;
-    color: #1a1a1a;
+    color: #fff;
 }
 
 .tip-card p {
     padding: 0 1rem 1rem;
     font-size: 1rem;
-    color: #555;
+    color: #fff;
 }
 
 .tip-button {
     display: block;
-    background: #ff6200;
-    color: white;
+    background: #D4A017;
+    color: #1a1a1a;
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 5px;
     margin: 0 1rem 1rem;
-    transition: background 0.3s;
+    transition: transform 0.3s ease, background 0.3s;
 }
 
 .tip-button:hover {
-    background: #e05500;
+    background: #b88c14;
+    transform: scale(1.05);
 }
 
 /* Contact Section */
 .contact {
     padding: 4rem 2rem;
-    background: white;
+    background: #1a1a1a;
     text-align: center;
+    animation: fadeIn 1s ease-in;
 }
 
 .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #1a1a1a;
+    color: #fff;
 }
 
 .contact-container {
@@ -424,19 +451,19 @@ nav a:hover, nav a.active {
 .contact-info h3, .contact-form h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #1a1a1a;
+    color: #fff;
 }
 
 .contact-info p {
     font-size: 1.1rem;
-    color: #555;
+    color: #fff;
     margin-bottom: 0.5rem;
 }
 
 .contact-form label {
     display: block;
     font-size: 1.1rem;
-    color: #1a1a1a;
+    color: #fff;
     margin-bottom: 0.5rem;
     text-align: left;
 }
@@ -445,19 +472,32 @@ nav a:hover, nav a.active {
     width: 100%;
     padding: 0.8rem;
     margin-bottom: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #D4A017;
     border-radius: 5px;
     font-size: 1rem;
+    background: #2b2b2b;
+    color: #fff;
 }
 
 .contact-form textarea {
     resize: vertical;
 }
 
+/* WhatsApp Icon */
+.fixed.bottom-6.right-6 {
+    background: #25D366 !important; /* Golden background */
+    color: #fff !important;
+    animation: bounce 2s infinite;
+}
+
+.fixed.bottom-6.right-6:hover {
+    background: #b88c14 !important;
+}
+
 /* Footer */
 footer {
     background: #1a1a1a;
-    color: white;
+    color: #fff;
     text-align: center;
     padding: 2rem;
 }
@@ -467,12 +507,45 @@ footer p {
 }
 
 footer a {
-    color: #ff6200;
+    color: #D4A017;
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-7px);
+    }
 }
 
 /* Responsive Design */
